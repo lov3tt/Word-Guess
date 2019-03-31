@@ -48,7 +48,7 @@ function update(guess) {
         else {
             //replace the _ with the correct guess letter
             correctGuess.push(guess);
-            //game won & restart: When the value of _ no longer exist in the whatToDraw fxn, add+1,alert, and restart
+            //game won & restart: When the value of _ no longer exist in the whatToDraw fxn, add +1 to wins, alert, and restart
             if (whatToDraw().indexOf("_") == -1) {
                 wins++
                 alert("You win! The pokemon was: " + pickedWord)
@@ -90,7 +90,6 @@ function whatToDraw() {
 
     for(var i = 0; i < pickedWord.length; i++){
         var currentCharacter = pickedWord[i];
-
         if(correctGuess.indexOf(currentCharacter) != -1){
             stringToDraw += currentCharacter + " ";
 //replace the letters with _
